@@ -59,17 +59,17 @@ export default{
     }
 
     #addbtn{
-        color:#2e3192;
-        border: 1px solid #2e3192;
+        color:darkslateblue;
+        border: 1px solid darkslateblue;
         background-color:white;
     }
 
     #addbtn:hover{
         color:white;
-        background-color:#2e3192;
+        background-color:darkslateblue;
     }
 
     #usersh{
-        color: #2e3192;
+        color: darkslateblue;
     }
 </style>

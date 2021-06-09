@@ -48,7 +48,7 @@
 /*eslint-disable */
 
 import firebase from '../../Firebase'
-import router from '../../routes'
+import router from '@/router'
 
 export default {
   name: 'Edituser',
@@ -72,12 +72,12 @@ export default {
     onSubmit (evt) {
       evt.preventDefault()
       const updateRef = firebase.firestore().collection('users').doc(this.$route.params.id);
-      updateRef.set(this.user).then((docRef) => {
+      updateRef.set(this.user).then(() => {
         this.key = ''
         this.user.name = ''
         this.user.description = ''
         this.user.email = ''
-        this.$router.push({ name: 'ShowUsers', params: { id: this.$route.params.id }})
+        router.push({ name: 'ShowUsers', params: { id: this.$route.params.id }})
       })
       .catch((error) => {
         alert("Error adding document: ", error);
@@ -97,6 +97,6 @@ export default {
   }
 
   #h2edituser{
-    color: #2e3192;
+    color: darkslateblue;
   }
 </style>

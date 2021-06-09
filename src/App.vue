@@ -33,6 +33,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+    margin-left: 8%;
+    margin-right: 8%
 }
 
 

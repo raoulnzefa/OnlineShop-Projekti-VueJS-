@@ -36,7 +36,7 @@
                     label="Enter email">
             <b-form-input id="email" v-model.trim="user.email"></b-form-input>
           </b-form-group>
-          <b-button type="submit" squared variant="outline-primary">Save</b-button>
+          <b-button class="p-2 m-2" type="submit"  variant="outline-primary">Save</b-button>
         </b-form>
       </b-jumbotron>
     </b-col>
@@ -47,7 +47,7 @@
 /*eslint-disable */
 
 import firebase from '../../Firebase'
-import router from '../../routes'
+import router from '@/router'
 
 export default {
   name: 'AddUser',
@@ -65,7 +65,7 @@ export default {
         this.user.name = ''
         this.user.description = ''
         this.user.email = ''
-        this.$router.push({
+        router.push({
           name: 'UsersList'
         })
       })
@@ -82,22 +82,21 @@ export default {
 
   #addUser{
     margin:5%;
-    
   }
 
   #addbtn{
-        color:#2e3192;
-        border: 1px solid #2e3192;
+        color:darkslateblue;
+        border: 1px solid darkslateblue;
         background-color:white;
     }
 
     #addbtn:hover{
         color:white;
-        background-color:#2e3192;
+        background-color:darkslateblue;
     }
 
     #usersh{
-        color: #2e3192;
+        color: darkslateblue;
     }
 
 </style>

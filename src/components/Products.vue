@@ -9,20 +9,20 @@
 
     <div class="col-lg-12 col-md-12 col-sm-12">
     <form @submit="onSubmit">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Product" id="name">
+      <div class="form-group p-2">
+        <input type="text" class="form-control" placeholder="Product Name" id="name">
       </div>
-      <div class="form-group">
-        <textarea class="form-control" rows="4" placeholder="Description" id="description"></textarea>
+      <div class="form-group p-2">
+        <textarea class="form-control" rows="4" placeholder="Product Description" id="description"></textarea>
       </div>
       <!-- <div class="form-group">
         <input type="text" class="form-control" placeholder="Image" v-model="products.image">
       </div> -->
-      <div class="form-group">
-        <label for="picture">Picture</label>
+      <div class="form-group p-2">
+        <!-- <label for="picture" >Picture</label> -->
         <input type="file" id="image" name="image"  class="form-control-file"  @change="onFileChange" >
       </div>
-      <div class="form-group">
+      <div class="form-group p-2">
         <input type="number" class="form-control" placeholder="Price" id="price">
       </div>
       <input type="submit" class="btn" value="Save" id="sendcontact">
@@ -33,7 +33,7 @@
 </template>
 <script>
 /* eslint-disable */
- import axios from 'axios'
+import axios from 'axios'
 export default {
   name: 'CreateProducts',
   data () {
@@ -57,11 +57,11 @@ export default {
       bodyFormData.set("description", document.getElementById("description").value);
       bodyFormData.append("image", image.files[0]);
       
-      axios.post(`http://localhost:8081/products`, bodyFormData)
+      axios.post(`http://localhost:4000/products`, bodyFormData)
       .then(response => {
         //console.log(response);
         this.$router.push({
-          name: 'Home',
+          name: 'home',
           //params: { id: response.data._id }
         })
         })
@@ -72,23 +72,24 @@ export default {
 </script>
 
 <style scoped>
+h1{
+  color: darkslateblue;
+}
+
 .container{
   padding:5%;
 }
-
 #sendcontact{
-  background-color:#2e3192;
+  background-color:darkslateblue;
   padding-left:10%;
   padding-right:10%;
   color:white;
-  transition: 0.8s ease;
+  transition: 1.0s ease;
 }
-
 #sendcontact:hover{
-  background-color:#111;
+  background-color: darkblue;
   padding-left:10%;
   padding-right:10%;
   color:white;
 }
-
 </style>

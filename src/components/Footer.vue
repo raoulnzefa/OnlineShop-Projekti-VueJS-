@@ -2,7 +2,7 @@
     <div class="footer-area footer-padding ">
             <div class="container">
                 <div class="row d-flex justify-content-between">
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
+                    <div class="logo col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="single-footer-caption mb-50">
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
@@ -15,51 +15,53 @@
                                             loading="lazy"
                                         />
                                 </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera pt-3">
+                                <div class="footer-tittle pt-3">
+                                    <div class="footer-pera p-2">
                                         <p> To offer an online, cost effective, quality , service orientated purchasing method.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
+                    <div class="links2 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
                                 <h4>Quick Links</h4>
                                 <ul>
                                     <li><router-link class="nav-link" to="/"><a>Home</a></router-link></li>
                                     <!-- <li><router-link class="nav-link" to="/products"><a>Products</a></router-link></li> -->
-                                     <li><a>Products</a></li>
+                                     <li><router-link class="nav-link" to="/AllProducts"><a>Products</a></router-link></li>
                                       <li><router-link class="nav-link" to="/About"><a>About Us</a></router-link></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                    <div class=" links1 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle ">
+                            <div class="footer-tittle">
                                 <h4>New Products</h4>
-                                <ul >
-                                    <li class="pt-1"><a>Laptops</a></li>
-                                    <li class="pt-1"><a>Gaming Chairs</a></li>
-                                    <li class="pt-1"><a> Game Consoles</a></li>
+                                <ul class="pb-3">
+                                   <li><router-link class="nav-link" to="/AllProducts"><a>Laptops</a></router-link></li>
+                                   <li><router-link class="nav-link" to="/AllProducts"><a>Gaming Chairs</a></router-link></li>
+                                   <li><router-link class="nav-link" to="/AllProducts"><a>Game Consoles</a></router-link></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
                                 <h4>Support</h4>
                                 <ul class="pt-2">
-                                    <li class="pt-1"><b-icon icon="telephone-fill"></b-icon> +38344111258 </li>
-                                    <li class="pt-1"><b-icon icon="inbox-fill"></b-icon>onlineshop@support.com</li>
-                                    <li class="pt-1"><b-icon icon="geo-alt-fill"></b-icon>Magjistralja Prishtine-Shkup km.6</li>
-                                    <li class="pt-1"><b-icon class="h2 mb-2 m-3" icon="facebook" variant="primary"></b-icon>
-                                    <b-icon class="h2 mb-2 m-3" icon="instagram" variant="danger"></b-icon>
-                                    <b-icon class="h2 mb-2 m-3" icon="google" variant="success"></b-icon>
+                                    <li class="pt-1"><b-icon  class="m-1" icon="telephone-fill"></b-icon> +38344111258 </li>
+                                    <li class="pt-1"><b-icon class="m-1" icon="inbox-fill"></b-icon>onlineshop@support.com</li>
+                                    <li class="pt-1"><b-icon class="m-1" icon="geo-alt-fill"></b-icon>Magjistralja Prishtine-Shkup km.6</li>
+                                    <div class="icons">
+                                    <li class="pt-1"><a href="https://www.facebook.com/"><b-icon class="h2 mb-2 m-2" icon="facebook" variant="primary"></b-icon></a>
+                                    <a href="https://www.instagram.com/"><b-icon class="h2 mb-2 m-2" icon="instagram" variant="danger"></b-icon></a>
+                                    <a href="https://www.gmail.com/"><b-icon class="h2 mb-2 m-2" icon="google" variant="success"></b-icon></a>
                                     </li>
+                                    </div>
 
                                 </ul>
                             </div>
@@ -72,49 +74,52 @@
 
 
 <style scoped>
-.footer-area{
-     width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
+.icons{
+    width: 100%;
 }
+h4{
+    color: darkslateblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
     
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .footer-padding {
         padding-top: 50px;
-        padding-bottom: 20px
+        /* padding-bottom: 20px */
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .footer-padding {
         padding-top: 25px;
-        padding-bottom: 18px
+        /* padding-bottom: 18px */
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer-padding {
         padding-top: 25px;
-        padding-bottom: 18px
+        /* padding-bottom: 18px */
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .footer-padding {
         padding-top: 25px;
-        padding-bottom: 25px
+        /* padding-bottom: 25px */
     }
 }
 
 @media (max-width: 575px) {
     .footer-padding {
         padding-top: 25px;
-        padding-bottom: 25px
+        /* padding-bottom: 25px */
     }
 }
 
 .footer-padding2 {
-    padding-bottom: 40px
+    padding-bottom: 20px
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -133,17 +138,27 @@
     .footer-padding2 {
         padding-bottom: 18px
     }
+    .links1{
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .footer-padding2 {
         padding-bottom: 18px
     }
+    .links1, .links2{
+         display: none;
+    }
 }
 
 @media (max-width: 575px) {
     .footer-padding2 {
         padding-bottom: 18px
+    }
+    
+    .links1, .links2, .logo{
+         display: none;
     }
 }
 

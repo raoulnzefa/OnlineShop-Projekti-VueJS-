@@ -1,62 +1,61 @@
 <template>
- <!-- Navbar -->
-<nav class="navbar navbar-expand-lg  bg-color">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img
+  <div>
+    <b-navbar toggleable="lg" type="dark" variant="dark">
+      <b-navbar-brand class="px-3"
+        ><img
           src="https://storage-asset.msi.com/global/picture/features/VGA/GTX1650/Gaming/gaming-x-logo.png"
           height="40"
           width="150"
           alt=""
           loading="lazy"
-        />
-      </a>
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-            <router-link class="nav-link" to="/">
-          <a>Home</a>
+      /></b-navbar-brand>
+
+       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item
+            ><router-link class="nav-link" to="/">
+              <a>Home</a>
             </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/products">
-          <a>Products</a>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="nav-link" to="/AllProducts">
+              <a>Products</a>
             </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/about">
-          <a>About Us</a>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="nav-link" to="/about">
+              <a>About Us</a>
             </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/users-list" >
-            <a>Users</a>
-          </router-link>
-        </li>
-        
-      </ul>
-      <!-- Left links -->
-    </div>
-    
-    <div class="d-flex align-items-center">
-       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="nav-link" to="/contact">
+              <a>Contact Us</a>
+            </router-link>
+          </b-nav-item>
+        </b-navbar-nav>
+
+        <b-navbar-nav>
+          <b-nav-item-dropdown text="Users" right>
+            <b-dropdown-item>
+              <router-link class="nav-link" to="/users-list">
+                <a>Users List</a>
+              </router-link>
+              </b-dropdown-item>
+            <b-dropdown-item>
+              <router-link class="nav-link" to="/add-user">
+                <a>Add User</a>
+              </router-link>
+              </b-dropdown-item>
+                <b-dropdown-item>
+              <router-link class="nav-link" to="/products">
+                <a>Add Products</a>
+              </router-link>
+              </b-dropdown-item>
+          </b-nav-item-dropdown>
+        </b-navbar-nav>
+         <b-nav-item class="bullet ml-auto">
+       <ul class="navbar-nav">
          <template v-if="user.loggedIn">
           <li class="nav-item">
             <a class="nav-link">{{user.data.displayName}}</a>
@@ -68,7 +67,7 @@
           <template v-else>
           <li class="nav-item">
             <router-link class="nav-link" to="login">
-             <a>Login</a>
+             <a class="bg-color">Login</a>
             </router-link>
           </li>
           <li class="nav-item">
@@ -78,24 +77,25 @@
           </li>
         </template>
        </ul>
-      
-    </div>
-  
+        </b-nav-item> 
+              </b-collapse>
+
+         
+       
+    </b-navbar>
+    
   </div>
-
-</nav>
-
 </template>
 
 <script>
-import { mapGetters } from "vuex"
-import firebase from "firebase"
+import { mapGetters } from "vuex";
+import firebase from "firebase";
 export default {
   computed: {
     ...mapGetters({
-// map `this.user` to `this.$store.getters.user`
-      user: "user"
-    })
+      // map `this.user` to `this.$store.getters.user`
+      user: "user",
+    }),
   },
   methods: {
     signOut() {
@@ -104,26 +104,35 @@ export default {
         .signOut()
         .then(() => {
           this.$router.replace({
-            name: "Home"
+            name: "Home",
           });
         });
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
-    nav{
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        
-    }
-    .bg-color{
-        
-        background-color: rgb(56,62,66);
-    }
-    a{
-        color: #C60021!important;
-    }
+.bullet{
+  list-style-type: none;
+}
+span{
+  color: #c60021 !important;
+}
+
+@media (max-width: 575.98px) {
+  .display {
+  align-items: center;
+  }
+}
+.bg-color, .show {
+  background-color: rgb(56, 62, 66);
+}
+a, span {
+  color: #c60021 !important;
+}
+dropdown-menu dropdown-menu-right{
+  background-color: darkgray;
+}
+
 </style>

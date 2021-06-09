@@ -1,18 +1,16 @@
 <template>
  
-<div class="aboutus">
-    <div class="about-details ">
         <div class="container">
             <div class="row">
-                <div class=" col-lg-6">
-                    <div class="about-details-cap mb-50 p-4">
-                        <h4>Our Mission</h4>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="about-details-cap p-2 pt-3 pl-2 pr-2 pb-0 ">
+                        <h4 class="pt-3">Our Mission</h4>
                         <p>
                             To offer an online, easy to use, cost effective, quality guaranteed, service orientated stationery purchasing method for school goers, personal and small business. Locally based service and community responsibility, coupled with purchasing convenience are the cornerstones of our business model.
                         </p>
                     </div>
                     
-                    <div class="about-details-cap mb-50 p-4">
+                    <div class="about-details-cap p-2 pt-3 pl-2 pr-2 pb-3">
                         <h4>Our Vision</h4>
                         <p>
                             To become the national online stationery shopping portal of choice, while maintaining a localised service offering.
@@ -20,31 +18,29 @@
                         <p>  To create social responsibility programmes with our customers to uplift the local communities we operate in by donating the products to educate and enhance their future. To sponsor at least 1 local underprivileged school goer with fundamental stationery throughout their studies.</p>
                     </div>
                 </div>
-                <div class="col-lg-6 pt-4 map img-fluid">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2937.6209566262937!2d21.12899141586645!3d42.584567179172396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549d539fe9170f%3A0x96a018472c30145!2sGjirafa%2C%20Inc!5e0!3m2!1sen!2s!4v1621186396607!5m2!1sen!2s" height="100%" width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 pt-4 map img-fluid">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2937.6209566262937!2d21.12899141586645!3d42.584567179172396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549d539fe9170f%3A0x96a018472c30145!2sGjirafa%2C%20Inc!5e0!3m2!1sen!2s!4v1621186396607!5m2!1sen!2s" height="450" width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
             </div>
-        </div>
-    </div>
     
     <div class="shop-method-area m-5">
         <div class="container p-4 m-2">
             <div class="method-wrapper">
                 <div class="row d-flex justify-content-between">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="single-method mb-40">
                             <b-icon class="h2 mb-2 m-3" icon="cart-check-fill" variant="danger"></b-icon> 
                             <h6>Free Shipping Method</h6>
 
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="single-method mb-40">
                            <b-icon class="h2 mb-2 m-3" icon="shield-shaded" variant="danger"></b-icon>  
                             <h6>Secure Payment System</h6>
 
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="single-method mb-40">
                             <b-icon class="h2 mb-2 m-3" icon="hourglass-split" variant="danger"></b-icon>  
                             <h6>24/7 Assistance</h6>
@@ -55,11 +51,20 @@
             </div>
         </div>
     </div>
-    <!-- Shop Method End-->
 </div>
 </template>
 
 <style scoped>
+h4{
+     color: #C60021;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+p{
+   text-align: justify;
+  text-justify: inter-word;
+}
 .aboutus{
      width: 1200px;
         margin-left: auto;

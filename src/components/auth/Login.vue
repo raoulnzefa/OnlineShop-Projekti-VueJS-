@@ -6,7 +6,7 @@
           <div class="card-body">
             <div v-if="error" class="alert alert-danger">{{error}}</div>
             <form action="#" @submit.prevent="submit">
-              <div class="form-group row">
+              <div class="form-group row m-2">
                 <label for="email" class="col-md-4 col-form-label text-md-right">Email:</label>
 
                 <div class="col-md-6">
@@ -23,7 +23,7 @@
                 </div>
               </div>
 
-              <div class="form-group row">
+              <div class="form-group row m-2">
                 <label for="password" class="col-md-4 col-form-label text-md-right">Password:</label>
 
                 <div class="col-md-6">
@@ -88,20 +88,20 @@ export default {
   }
 
   #cardregister{
-    box-shadow: 5px 5px 5px 1px rgb(46, 49, 146, 0.5);
+    box-shadow: 5px 5px 5px 1px darkslateblue;
   }
 
   #loginbutton{
     background-color:white;
-    color:#2e3192;
-    border: 1px solid #2e3192;
+    color:darkslateblue;
+    border: 1px solid darkslateblue;
     padding-left: 5%;
     padding-right: 5%;
   }
 
   #loginbutton:hover{
-    background-color:#2e3192;
+    background-color:darkslateblue;
     color:white;
-    border: 1px solid #2e3192;
+    border: 1px solid darkslateblue;
   }
 </style>
